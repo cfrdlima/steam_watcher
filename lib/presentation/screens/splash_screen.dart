@@ -106,7 +106,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: [
                 _buildPage(
                   'Bem-vindo ao Steam Watcher',
-                  'Aqui você aprende sobre o app!',
+                  'Um aplicativo móvel que ajuda jogadores a ficarem informados sobre as últimas atualizações de seus jogos Steam favoritos.',
                 ),
                 _buildPage('Página 2', 'Como usar a funcionalidade A'),
                 _buildPage('Página 3', 'Como usar a funcionalidade B'),
@@ -171,31 +171,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          title,
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
+        Container(
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
         ),
-        SizedBox(height: 36),
-        Text(description, textAlign: TextAlign.center),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(description, textAlign: TextAlign.justify),
+        ),
       ],
-    );
-  }
-}
-
-class LoginScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Login')),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Ação para realizar o login
-          },
-          child: Text('Entrar'),
-        ),
-      ),
     );
   }
 }

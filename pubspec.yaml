@@ -11,3 +11,7 @@ dependencies:
   shared_preferences: ^2.2.0 # Para armazenar configurações localmente
   firebase_messaging: ^14.7.6 # Para notificações push (opcional)
 
+flutter:
+  uses-material-design: true
+
+
